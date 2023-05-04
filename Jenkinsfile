@@ -2,8 +2,9 @@ pipeline{
     agent any
     stages{
     	stage("SCM"){
+		steps{
 		sh "git clone https://github.com/Nishant5050/devops-candidate-exam.git"
-
+	   }
 	}
         stage("TF Init"){
             steps{
