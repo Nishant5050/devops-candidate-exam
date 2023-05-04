@@ -33,7 +33,7 @@ pipeline{
             steps{
 
 		sh "cd devops-candidate-exam"
-		# sh  "aws lambda invoke --function-name lambda-function --cli-binary-format raw-in-base64-out --payload '{"subnet_id": "vpc-00bf0d10a6a41600c","name":"nishantshete","email":"nishantshete9999" }' response.json"
+		// sh  "aws lambda invoke --function-name lambda-function --cli-binary-format raw-in-base64-out --payload '{"subnet_id": "vpc-00bf0d10a6a41600c","name":"nishantshete","email":"nishantshete9999" }' response.json"//
 
             }
         }
