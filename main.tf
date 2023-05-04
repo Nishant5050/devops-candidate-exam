@@ -101,7 +101,7 @@ resource "aws_iam_role_policy_attachment" "iam_role_policy_attachment_lambda_vpc
 
 
 resource "aws_s3_bucket" "terraform-state" {
- bucket = "test-lambda-99"
+ bucket = "nishant-bucket-9999"
  acl    = "private"
 
  versioning {
