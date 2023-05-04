@@ -7,36 +7,31 @@ pipeline{
 	}
         stage("TF Init"){
             steps{
-	    	  sh "cd devops-candidate-exam"
-                  sh "terraform init"
+	    	  sh "cd devops-candidate-exam && terraform init"
             }
         }
         stage("TF Validate"){
             steps{
 	
-		sh "cd devops-candidate-exam"
-                sh "terraform validate"
+		sh "cd devops-candidate-exam && terraform validate"
             }
         }
         stage("TF Plan"){
             steps{
 	        
-		sh "cd devops-candidate-exam"
-                sh "terraform plan"
+		sh "cd devops-candidate-exam && terraform plan"
             }
         }
         stage("TF Apply"){
             steps{
 	    	
-		sh "cd devops-candidate-exam"
-                sh "terraform apply --auto-approve"
+		sh "cd devops-candidate-exam && terraform apply --auto-approve"
             }
         }
         stage("Invoke Lambda"){
             steps{
 
-		sh "cd devops-candidate-exam"
-		sh "aws lambda invoke --function-name lambda-function --cli-binary-format raw-in-base64-out --payload '{"subnet_id": "","name":"Nishnat Fakkad Shete","email":"nishantshete9999@gmail.com"}' response.json"
+		sh "cd devops-candidate-exam && aws lambda invoke --function-name lambda-function --cli-binary-format raw-in-base64-out --payload '{"subnet_id": "","name":"Nishnat Fakkad Shete","email":"nishantshete9999@gmail.com"}' response.json"
 		
 
 
