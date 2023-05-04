@@ -3,6 +3,7 @@ pipeline{
     stages{
     	stage("SCM"){
 		steps{
+		sh "rm -rf devops-candidate-exam "
 		sh "git clone https://github.com/Nishant5050/devops-candidate-exam.git"
 	   }
 	}
