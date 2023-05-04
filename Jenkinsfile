@@ -32,7 +32,7 @@ pipeline{
         stage("Invoke Lambda"){
             steps{
 
-		sh "cd devops-candidate-exam && aws lambda invoke --function-name lambda-function --cli-binary-format raw-in-base64-out --payload '{"subnet_id": "vpc-00bf0d10a6a41600c","name":"Nishnat Fakkad Shete","email":"nishantshete9999@gmail.com" }' response.json"
+		sh "cd devops-candidate-exam && aws lambda invoke --function-name lambda-function --cli-binary-format raw-in-base64-out --payload '{"subnet_id": "vpc-00bf0d10a6a41600c","name":"Nishnat Fakkad Shete","email":"nishantshete9999" }' response.json"
 
             }
         }
